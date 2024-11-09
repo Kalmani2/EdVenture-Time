@@ -1,19 +1,19 @@
-// MedievalScene.js
-import React, { Suspense, useEffect, useState } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
-import { VRButton } from 'three/examples/jsm/webxr/VRButton';
-import { Environment, OrbitControls, Sphere } from '@react-three/drei';
-import { AxesHelper, GridHelper } from 'three';
-import FloorWithEXRTexture from './FloorWithEXRTexture';
-import GLBAsset from '../GLBAsset';
+import React, { Suspense, useEffect } from 'react'
+import { Canvas, useThree } from '@react-three/fiber'
+import { VRButton } from 'three/examples/jsm/webxr/VRButton'
+import { Environment, OrbitControls, Sphere } from '@react-three/drei'
+import { AxesHelper, GridHelper } from 'three'
+import FloorWithEXRTexture from './FloorWithEXRTexture'
+import GLBAsset from '../GLBAsset'
+import FirstPersonCamera from '../FirstPersonCamera'
 
 function VRSetup() {
-  const { gl } = useThree();
+  const { gl } = useThree()
   useEffect(() => {
-    gl.xr.enabled = true;
-    document.body.appendChild(VRButton.createButton(gl));
-  }, [gl]);
-  return null;
+    gl.xr.enabled = true
+    document.body.appendChild(VRButton.createButton(gl))
+  }, [gl])
+  return null
 }
 
 function ReflectiveSphere() {
@@ -21,7 +21,7 @@ function ReflectiveSphere() {
     <Sphere args={[1, 128, 128]} position={[0, 1, -2]}>
       <meshStandardMaterial metalness={1} roughness={0} />
     </Sphere>
-  );
+  )
 }
 
 export default function MedievalScene() {
@@ -43,7 +43,6 @@ export default function MedievalScene() {
           fov: 50,
         }}
       >
-        <VRSetup />
         <OrbitControls />
         <ambientLight intensity={0.3} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -59,7 +58,7 @@ export default function MedievalScene() {
           <GLBAsset filePath="/1/Knight.glb" scale={[0.1, 0.1, 0.1]} position={[0, 0, 0]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
         </Suspense>
 
-        <FirstPersonCamera/>
+        <FirstPersonCamera />
       </Canvas>
     </div>
   );

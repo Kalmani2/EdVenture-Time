@@ -12,13 +12,13 @@ export default function FirstPersonCamera() {
   const [movement, setMovement] = useState({
     forward: false,
     backward: false,
-    left: false,
+    left: false,    
     right: false
   })
 
   useEffect(() => {
     gl.xr.enabled = true
-    camera.position.set(0, 10, 5)
+    camera.position.set(0, 10, 10)
 
     const handleKeyDown = (event) => {
       switch (event.code) {
