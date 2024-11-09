@@ -69,7 +69,7 @@ export default function MedievalScene() {
       <Canvas
         camera={{
           position: [0, 2.5, 5],
-          fov: 45
+          fov: 75
         }}
       >
         <ambientLight intensity={0.3} />
