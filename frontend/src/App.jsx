@@ -8,6 +8,7 @@ import './App.css'
 
 
 import MedievalScene from './components/1/MedievalScene'
+import Home from './components/home/Home'
 
 function VRSetup() {
   const { gl } = useThree()
@@ -29,22 +30,9 @@ function ReflectiveSphere() {
 function App() {
   return (
     <div style={{ height: '100vh' }}>
-      <Canvas
-        camera={{
-          position: [0, 0, 1.15],
-          fov: 50,
-        }}
-      >
-        <VRSetup />
-        <OrbitControls />
-        <ambientLight intensity={0.3} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
-        <axesHelper args={[5]} />
-        <gridHelper args={[10, 10]} />
-        <Suspense fallback={null}>
-          <Environment files="/rogland_clear_night_4k.hdr" background />
-        </Suspense>
-      </Canvas>
+      
+
+      {/* <Home/> */}
 
       <MedievalScene />
     </div>

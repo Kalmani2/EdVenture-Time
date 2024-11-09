@@ -3,6 +3,7 @@ import { Canvas, useThree } from '@react-three/fiber'
 import { VRButton } from 'three/examples/jsm/webxr/VRButton'
 import { Environment, OrbitControls, Sphere } from '@react-three/drei'
 import { AxesHelper, GridHelper } from 'three'
+import FloorWithEXRTexture from './FloorWithEXRTexture'
 // import AluminumCan from './AluminumCan'
 // import VictorianStreet from './VictorianStreet'
 // import DrunkMan from './DrunkMan'
@@ -43,6 +44,7 @@ export default function MedievalScene() {
         <Suspense fallback={null}>
           <Environment files="/rogland_clear_night_4k.hdr" background />
           {/* <AluminumCan position={[2, 1, 0]} /> */}
+          <FloorWithEXRTexture/>
         </Suspense>
       </Canvas>
     </div>
