@@ -56,8 +56,10 @@ export default function MedievalScene() {
           <GLBAsset filePath="/1/Barrel.glb" scale={[1, 1, 1]} position={[-2, 0, 0]} name="Barrell" message="I am a barrell. gay"/>
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
           <GLBAsset filePath="/1/Catapult.glb" scale={[0.1, 0.1, 0.1]} position={[20, 0, 0]} name="Catapult" message="This is a catapult"/>
-          <GLBAsset filePath="/1/Knight.glb" scale={[0.1, 0.1, 0.1]} position={[0, 0, 0]} name="Knight" message="I am a knight " interactable={true}/>
+          <GLBAsset filePath="/1/Knight.glb" scale={[0.1, 0.1, 0.1]} position={[0, 0, 0]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
         </Suspense>
+
+        <FirstPersonCamera/>
       </Canvas>
     </div>
   );

@@ -1,0 +1,32 @@
+- Subtopic: Torture Methods
+    - Random fact: One of the most notorious torture methods used during the Middle Ages was the Judas cradle. Victims were placed on an upwards pointed pyramid-like seat, with the point inserted into their bodies - an incredibly painful method.
+    - Suggested question 1: What was the purpose behind the use of torture in the Middle Ages?
+    - Suggested question 1's answer: The purpose of torture was primarily to extract confessions or information. It was also used as a punishment and a means to instill fear.
+    - Suggested question 2: Was there any regulation around the use of torture?
+    - Suggested question 2's answer: In the early Middle Ages, torture was not widely regulated, and was often brutal and used without reservations. However, by the late Middle Ages, laws began to emerge tempering its use somewhat.
+    - Multiple-choice question: Which of these torture devices was not used during the Middle Ages?
+    - MQ answer 1: The Rack
+    - MQ answer 2: Iron Maiden
+    - MQ answer 3: The Electric Chair (Correct)
+
+- Subtopic: Weaponry
+    - Random fact: The English Longbow, used in the Middle Ages, had a range of around 250 yards and could penetrate armor at distances greater than 200 yards.
+    - Suggested question 1: What was the significance of learning to use a longbow?
+    - Suggested question 1's answer: Mastery of the longbow took years of practice and was of significant tactical importance in warfare. It had great firepower and range, allowing soldiers to keep enemies at a distance.
+    - Suggested question 2: What was the most common weapon used by knights during the Medieval period?
+    - Suggested question 2's answer: The most common weapon used by knights was the sword, although they were also trained to use a variety of other weapons.
+    - Multiple-choice question: What was the primary material used to manufacture medieval weapons?
+    - MQ answer 1: Bronze
+    - MQ answer 2: Iron (Correct)
+    - MQ answer 3: Steel
+  
+- Subtopic: Architecture
+    - Random fact: Most domestic buildings in the Middle Ages were constructed with timber and wattle and daub. Only the wealthy could afford to build and maintain stone buildings.
+    - Suggested question 1: What was the predominant architectural style of the Middle Ages?
+    - Suggested question 1's answer: The Gothic style was the predominant architectural style of the Middle Ages, characterized by pointed arches, ribbed vaults, and flying buttresses.
+    - Suggested question 2: What was the most significant type of building in Medieval architecture?
+    - Suggested question 2's answer: The most significant and common building in Medieval architecture was the Christian church, serving both religious and community functions.
+    - Multiple-choice question: What is a distinctive feature of Gothic architecture?
+    - MQ answer 1: Massive round columns
+    - MQ answer 2: Flat roofs
+    - MQ answer 3: Pointed arches (Correct)

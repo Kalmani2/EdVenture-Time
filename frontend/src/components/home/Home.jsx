@@ -5,6 +5,9 @@ import { OrbitControls, Environment } from '@react-three/drei'
 import { VRButton } from 'three/examples/jsm/webxr/VRButton'
 import { AxesHelper, GridHelper } from 'three'
 
+import GLBAsset from '../GLBAsset'
+import FirstPersonCamera from '../FirstPersonCamera'
+
 function VRSetup() {
   const { gl } = useThree()
   useEffect(() => {
