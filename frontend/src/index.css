@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure the body and html cover the entire viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;  /* Prevent any scrollbars from appearing */
+  }
+  
+  /* This div takes the full width and height of the viewport */
+  .app-container {
+    width: 100vw;  /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;     /* Ensure no margin around the container */
+    padding: 0;    /* Ensure no padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;  /* Position absolutely to prevent spacing */
+    top: 0;
+    left: 0;
+  }
+  
+  /* Make sure the canvas occupies the full screen */
+  canvas {
+    display: block;    /* Remove inline-block spacing */
+    width: 100vw;      /* Full width */
+    height: 100vh;     /* Full height */
+    object-fit: cover; /* Make sure it covers the viewport without stretching */
+  }
+  
