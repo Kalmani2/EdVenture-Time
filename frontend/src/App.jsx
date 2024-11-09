@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Box, OrbitControls, Environment, Sphere } from '@react-three/drei'
 import './App.css'
@@ -18,7 +18,7 @@ function ReflectiveSphere() {
 
 function App() {
   return (
-    <div style={{ height: '100vh', width: '200vh' }}>
+    <div className="app-container">
       {/* <Home/> */}
       <MedievalScene />
       {/* <ArrowThrower/> */}
