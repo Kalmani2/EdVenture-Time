@@ -1,0 +1,98 @@
+{
+  "martin_luther_king": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "Sirhan Sirhan",
+            "correct": false
+          },
+          {
+            "answer": "James Earl Ray",
+            "correct": true
+          },
+          {
+            "answer": "Lee Harvey Oswald",
+            "correct": false
+          }
+        ],
+        "question": "Who was the man accused of assassinating Martin Luther King Jr.?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "He advocated for nonviolent forms of protest, including civil disobedience and peaceful protests. The philosophy of his movement was heavily influenced by Mahatma Gandhi\u2019s principles of non-violence.",
+        "question": "What kind of strategies did Martin Luther King, Jr. advocate for in achieving social equality?"
+      },
+      {
+        "answer": "Martin Luther King Jr. was assassinated on April 4, 1968, in Memphis, Tennessee.",
+        "question": "How did Martin Luther King, Jr. die?"
+      }
+    ],
+    "random_fact": "Martin Luther King, Jr's 'I Have a Dream' speech during the March on Washington in 1963 is considered one of the greatest speeches in American history."
+  },
+  "rosa_parks": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "Birmingham Campaign",
+            "correct": false
+          },
+          {
+            "answer": "Memphis Sanitation Strike",
+            "correct": false
+          },
+          {
+            "answer": "Montgomery Bus Boycott",
+            "correct": true
+          }
+        ],
+        "question": "What is the name of the boycott that Rosa Parks\u2019s bus arrest led to?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "Her act of defiance triggered the Montgomery Bus Boycott, a significant event in the civil rights movement.",
+        "question": "What was the consequence of Rosa Parks' action?"
+      },
+      {
+        "answer": "No, there were several others before Rosa, including Claudette Colvin who refused to give up her seat nine months prior, but Rosa Parks\u2019 case became more famous and sparked wider protest.",
+        "question": "Was Rosa Parks the first person to resist bus segregation?"
+      }
+    ],
+    "random_fact": "Rosa Parks, on December 1, 1955, in Montgomery, Alabama, refused to give up her seat on a bus for a white person, which was required by the law at the time."
+  },
+  "ruby_bridges": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "John F. Kennedy",
+            "correct": true
+          },
+          {
+            "answer": "Dwight D. Eisenhower",
+            "correct": false
+          },
+          {
+            "answer": "Lyndon B. Johnson",
+            "correct": false
+          }
+        ],
+        "question": "Which U.S. president ordered federal protection for Ruby Bridges when she integrated a New Orleans school?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "Ruby Bridges integrated the all-white William Frantz Elementary School on November 14, 1960.",
+        "question": "What year did Ruby Bridges integrate an all-white school?"
+      },
+      {
+        "answer": "Yes, despite acute societal pressures and hostility, Ruby Bridges continued her education, demonstrating remarkable resilience.",
+        "question": "Did Ruby Bridges continue her education despite the challenges she faced?"
+      }
+    ],
+    "random_fact": "Ruby Bridges, at the age of six, was the first African American child to desegregate an all-white elementary school in the South (New Orleans, Louisiana)."
+  }
+}
