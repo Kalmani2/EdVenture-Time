@@ -7,8 +7,12 @@ import './App.css'
 
 
 
+
+
 import MedievalScene from './components/1/MedievalScene'
+import RomanScene from './components/2/RomanScene'
 import Home from './components/home/Home'
+import ArrowThrower from './components/1/ArrowThrower'
 
 function VRSetup() {
   const { gl } = useThree()
@@ -35,6 +39,9 @@ function App() {
       {/* <Home/> */}
 
       <MedievalScene />
+      {/* <ArrowThrower/> */}
+      {/* <RomanScene/> */}
+
     </div>
   )
 }
