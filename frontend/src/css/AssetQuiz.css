@@ -1,0 +1,110 @@
+/* AssetQuiz.css */
+
+.assetquiz-popup {
+    background: #f8f4e3;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    padding: 20px;
+    font-family: 'Garamond', serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.assetquiz-title {
+    background: #b08d57;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.assetquiz-question {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.assetquiz-option {
+    background-color: #e0d7c5;
+    color: #3e2f1b;
+    padding: 10px;
+    border: 1px solid #b08d57;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.assetquiz-option:hover {
+    background-color: #d0c7b5;
+}
+
+.assetquiz-option.correct {
+    background-color: #a2d5a1;
+    color: #ffffff;
+}
+
+.assetquiz-option.incorrect {
+    background-color: #f5a8a8;
+    color: #ffffff;
+}
+
+.assetquiz-answer-feedback {
+    font-size: 16px;
+    color: #3e2f1b;
+    margin-top: 10px;
+}
+
+.assetquiz-answer-reveal {
+    font-size: 16px;
+    color: #3e2f1b;
+    background: #e0d7c5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.assetquiz-random-fact {
+    font-size: 16px;
+    color: #3e2f1b;
+    margin-top: 20px;
+}
+
+.assetquiz-next-button {
+    background: #b08d57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.assetquiz-next-button:hover {
+    background: #9e7a4b;
+}
+
+.assetquiz-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f44336;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
