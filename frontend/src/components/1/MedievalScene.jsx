@@ -5,6 +5,7 @@ import { Environment, OrbitControls, Sphere } from '@react-three/drei'
 import { AxesHelper, GridHelper } from 'three'
 import FloorWithEXRTexture from './FloorWithEXRTexture'
 import GLBAsset from '../GLBAsset'
+import FirstPersonCamera from '../FirstPersonCamera'
 
 function VRSetup() {
   const { gl } = useThree()
@@ -43,11 +44,13 @@ export default function MedievalScene() {
           <FloorWithEXRTexture />
 
           <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[-4, 0, 0]} />
-          <GLBAsset filePath="/1/Barrel.glb" scale={[1, 1, 1]} position={[-2, 0, 0]} />
+          <GLBAsset filePath="/1/Barrel.glb" scale={[1, 1, 1]} position={[-2, -0.5, 0]} />
           <GLBAsset filePath="/1/Castle Fortress.glb" scale={[5, 5, 5]} position={[30, 0, 0]} />
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
-          <GLBAsset filePath="/1/Catapult.glb" scale={[0.1, 0.1, 0.1]} position={[20, 0, 0]} />
+          <GLBAsset filePath="/1/Catapult.glb" scale={[0.5, 0.5, 0.5]} position={[20, 0, 0]} />
         </Suspense>
+
+        <FirstPersonCamera/>
       </Canvas>
     </div>
   )
