@@ -3,7 +3,7 @@ import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { TextureLoader } from 'three'
 
-export default function FloorWithTexture({ texturePath = '/1/stone_tiles_02_diff_1k.jpg', size = [10, 10], repeat = [4, 4] }) {
+export default function FloorWithTexture({ texturePath = '/1/stone_tiles_02_diff_1k.jpg', size = [100, 100], repeat = [4, 4] }) {
 
   const texture = useLoader(TextureLoader, texturePath)
   

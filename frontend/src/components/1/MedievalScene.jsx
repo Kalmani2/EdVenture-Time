@@ -4,10 +4,7 @@ import { VRButton } from 'three/examples/jsm/webxr/VRButton'
 import { Environment, OrbitControls, Sphere } from '@react-three/drei'
 import { AxesHelper, GridHelper } from 'three'
 import FloorWithEXRTexture from './FloorWithEXRTexture'
-// import AluminumCan from './AluminumCan'
-// import VictorianStreet from './VictorianStreet'
-// import DrunkMan from './DrunkMan'
-// import FloatingBlobs from './FloatingBlobs'
+import GLBAsset from '../GLBAsset'
 
 function VRSetup() {
   const { gl } = useThree()
@@ -43,8 +40,13 @@ export default function MedievalScene() {
         <primitive object={new GridHelper(10, 10)} />
         <Suspense fallback={null}>
           <Environment files="/rogland_clear_night_4k.hdr" background />
-          {/* <AluminumCan position={[2, 1, 0]} /> */}
-          <FloorWithEXRTexture/>
+          <FloorWithEXRTexture />
+
+          <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[-4, 0, 0]} />
+          <GLBAsset filePath="/1/Barrel.glb" scale={[1, 1, 1]} position={[-2, 0, 0]} />
+          <GLBAsset filePath="/1/Castle Fortress.glb" scale={[5, 5, 5]} position={[30, 0, 0]} />
+          <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
+          <GLBAsset filePath="/1/Catapult.glb" scale={[0.1, 0.1, 0.1]} position={[20, 0, 0]} />
         </Suspense>
       </Canvas>
     </div>
