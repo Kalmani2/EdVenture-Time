@@ -68,7 +68,7 @@ export default function MedievalScene() {
     <div style={{ height: '100vh', position: 'relative' }} onClick={closeDialogue}>
       <Canvas
         camera={{
-          position: [0, 2.5, 5],
+          position: [0, 3, 5],
           fov: 75
         }}
       >
@@ -85,7 +85,7 @@ export default function MedievalScene() {
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
           <GLBAsset filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 0]} name="Catapult" message="This is a catapult"/>
           <GLBAsset filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[0, 0, 0]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
-          <AssetQuiz filePath="/1/King.glb" scale={[1, 1, 1]} position={[0, 0, 0]} jsonFile="../../1/medieval.json" name="King"/>
+          <AssetQuiz filePath="/1/King.glb" scale={[2.2, 2.2, 2.2]} position={[5, 0, 0]} jsonFile="../../1/medieval.json" name="King"/>
         </Suspense>
 
         {/* FirstPersonCamera with onInteract prop removed, since interaction is now handled by pressing 'E' */}
