@@ -1,34 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { Suspense, useRef, useEffect } from 'react'
+import { Canvas, useThree } from '@react-three/fiber'
+import { VRButton } from 'three/examples/jsm/webxr/VRButton'
+import { Box, OrbitControls, Environment, Sphere } from '@react-three/drei'
+import * as THREE from 'three'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+
+import MedievalScene from './components/1/MedievalScene'
+
+function VRSetup() {
+  const { gl } = useThree()
+  useEffect(() => {
+    gl.xr.enabled = true
+    document.body.appendChild(VRButton.createButton(gl))
+  }, [gl])
+  return null
+}
+
+function ReflectiveSphere() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Sphere args={[1, 128, 128]} position={[0, 0, 0]}>
+      <meshStandardMaterial metalness={1} roughness={0} />
+    </Sphere>
+  )
+}
+
+function App() {
+  return (
+    <div style={{ height: '100vh' }}>
+      <Canvas
+        camera={{
+          position: [0, 0, 1.15],
+          fov: 50,
+        }}
+      >
+        <VRSetup />
+        <OrbitControls />
+        <ambientLight intensity={0.3} />
+        <directionalLight position={[10, 10, 5]} intensity={1} />
+        <axesHelper args={[5]} />
+        <gridHelper args={[10, 10]} />
+        <Suspense fallback={null}>
+          <Environment files="/rogland_clear_night_4k.hdr" background />
+        </Suspense>
+      </Canvas>
+
+      <MedievalScene />
+    </div>
   )
 }
 
