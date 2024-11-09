@@ -1,0 +1,98 @@
+{
+  "architecture": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "The Leaning Tower of Pisa",
+            "correct": false
+          },
+          {
+            "answer": "The Colosseum",
+            "correct": true
+          },
+          {
+            "answer": "The Eiffel Tower",
+            "correct": false
+          }
+        ],
+        "question": "Which of the following is a famous example of Roman architecture?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "The Romans pioneered the architectural design of the arch.",
+        "question": "What architectural design did the Romans pioneer?"
+      },
+      {
+        "answer": "The arch allowed the Romans to build larger, more stable structures. It was also used in the construction of aqueducts, which helped transport water across vast distances.",
+        "question": "How did the architectural design of the arch benefit the Romans?"
+      }
+    ],
+    "random_fact": "The Romans pioneered the architectural design of the arch."
+  },
+  "colosseum_gladiator_fighting": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "20,000",
+            "correct": false
+          },
+          {
+            "answer": "30,000",
+            "correct": false
+          },
+          {
+            "answer": "50,000-80,000",
+            "correct": true
+          }
+        ],
+        "question": "How many spectators could the Colosseum hold?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "Most of the gladiators were slaves, criminals, or prisoners of war.",
+        "question": "Who were most of the gladiators?"
+      },
+      {
+        "answer": "Gladiator fights were a form of public spectacle and entertainment for the Roman people. They were also used to celebrate victories and demonstrate the power and prowess of Roman emperors.",
+        "question": "What was the main purpose of gladiator fights?"
+      }
+    ],
+    "random_fact": "Many gladiators were slaves, criminals, or prisoners of war."
+  },
+  "religion": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "Apollo",
+            "correct": false
+          },
+          {
+            "answer": "Hermes",
+            "correct": false
+          },
+          {
+            "answer": "Jupiter",
+            "correct": true
+          }
+        ],
+        "question": "Who was the king of the Roman gods?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "The Romans practiced a polytheistic religion and worshiped a pantheon of gods and goddesses.",
+        "question": "What type of religion did the Romans practice?"
+      },
+      {
+        "answer": "Originally influenced by Greek polytheism, Roman religion evolved over time, gradually incorporating elements of other cultures and faiths. With the rise of Christianity, it eventually became the predominant religion in the Roman Empire.",
+        "question": "How did Roman religion evolve over time?"
+      }
+    ],
+    "random_fact": "The Romans were polytheistic and worshiped a pantheon of gods and goddesses."
+  }
+}

@@ -1,21 +1,10 @@
-
-import React, { Suspense, useEffect } from 'react'
-import { Canvas, useThree } from '@react-three/fiber'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment } from '@react-three/drei'
-import { VRButton } from 'three/examples/jsm/webxr/VRButton'
 import { AxesHelper, GridHelper } from 'three'
 
 import GLBAsset from '../GLBAsset'
 import FirstPersonCamera from '../FirstPersonCamera'
-
-function VRSetup() {
-  const { gl } = useThree()
-  useEffect(() => {
-    gl.xr.enabled = true
-    document.body.appendChild(VRButton.createButton(gl))
-  }, [gl])
-  return null
-}
 
 export default function Home() {
   return (
@@ -25,7 +14,6 @@ export default function Home() {
         fov: 50,
       }}
     >
-      <VRSetup />
       <OrbitControls />
       <ambientLight intensity={0.3} />
       <directionalLight position={[10, 10, 5]} intensity={1} />

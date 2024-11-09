@@ -1,23 +1,12 @@
-import React, { Suspense, useRef, useEffect } from 'react'
-import { Canvas, useThree } from '@react-three/fiber'
-import { VRButton } from 'three/examples/jsm/webxr/VRButton'
+import React, { Suspense } from 'react'
+import { Canvas } from '@react-three/fiber'
 import { Box, OrbitControls, Environment, Sphere } from '@react-three/drei'
-import * as THREE from 'three'
 import './App.css'
 
-
-
 import MedievalScene from './components/1/MedievalScene'
+import RomanScene from './components/2/RomanScene'
 import Home from './components/home/Home'
-
-function VRSetup() {
-  const { gl } = useThree()
-  useEffect(() => {
-    gl.xr.enabled = true
-    document.body.appendChild(VRButton.createButton(gl))
-  }, [gl])
-  return null
-}
+import ArrowThrower from './components/1/ArrowThrower'
 
 function ReflectiveSphere() {
   return (
@@ -29,12 +18,11 @@ function ReflectiveSphere() {
 
 function App() {
   return (
-    <div style={{ height: '100vh' }}>
-      
-
+    <div style={{ height: '100vh', width: '200vh' }}>
       {/* <Home/> */}
-
       <MedievalScene />
+      {/* <ArrowThrower/> */}
+      {/* <RomanScene/> */}
     </div>
   )
 }

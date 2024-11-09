@@ -1,0 +1,98 @@
+{
+  "architecture": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "Massive round columns",
+            "correct": false
+          },
+          {
+            "answer": "Flat roofs",
+            "correct": false
+          },
+          {
+            "answer": "Pointed arches",
+            "correct": true
+          }
+        ],
+        "question": "What is a distinctive feature of Gothic architecture?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "The Gothic style was the predominant architectural style of the Middle Ages, characterized by pointed arches, ribbed vaults, and flying buttresses.",
+        "question": "What was the predominant architectural style of the Middle Ages?"
+      },
+      {
+        "answer": "The most significant and common building in Medieval architecture was the Christian church, serving both religious and community functions.",
+        "question": "What was the most significant type of building in Medieval architecture?"
+      }
+    ],
+    "random_fact": "Most domestic buildings in the Middle Ages were constructed with timber and wattle and daub. Only the wealthy could afford to build and maintain stone buildings."
+  },
+  "torture_methods": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "The Rack",
+            "correct": false
+          },
+          {
+            "answer": "Iron Maiden",
+            "correct": false
+          },
+          {
+            "answer": "The Electric Chair",
+            "correct": true
+          }
+        ],
+        "question": "Which of these torture devices was not used during the Middle Ages?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "The purpose of torture was primarily to extract confessions or information. It was also used as a punishment and a means to instill fear.",
+        "question": "What was the purpose behind the use of torture in the Middle Ages?"
+      },
+      {
+        "answer": "In the early Middle Ages, torture was not widely regulated, and was often brutal and used without reservations. However, by the late Middle Ages, laws began to emerge tempering its use somewhat.",
+        "question": "Was there any regulation around the use of torture?"
+      }
+    ],
+    "random_fact": "One of the most notorious torture methods used during the Middle Ages was the Judas cradle. Victims were placed on an upwards pointed pyramid-like seat, with the point inserted into their bodies - an incredibly painful method."
+  },
+  "weaponry": {
+    "multiple_choice": [
+      {
+        "options": [
+          {
+            "answer": "Bronze",
+            "correct": false
+          },
+          {
+            "answer": "Iron",
+            "correct": true
+          },
+          {
+            "answer": "Steel",
+            "correct": false
+          }
+        ],
+        "question": "What was the primary material used to manufacture medieval weapons?"
+      }
+    ],
+    "questions": [
+      {
+        "answer": "Mastery of the longbow took years of practice and was of significant tactical importance in warfare. It had great firepower and range, allowing soldiers to keep enemies at a distance.",
+        "question": "What was the significance of learning to use a longbow?"
+      },
+      {
+        "answer": "The most common weapon used by knights was the sword, although they were also trained to use a variety of other weapons.",
+        "question": "What was the most common weapon used by knights during the Medieval period?"
+      }
+    ],
+    "random_fact": "The English Longbow, used in the Middle Ages, had a range of around 250 yards and could penetrate armor at distances greater than 200 yards."
+  }
+}
