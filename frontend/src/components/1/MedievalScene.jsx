@@ -68,7 +68,7 @@ export default function MedievalScene() {
     <div style={{ height: '100vh', position: 'relative' }} onClick={closeDialogue}>
       <Canvas
         camera={{
-          position: [0, 3, 5],
+          position: [6, 3, 40],
           fov: 75
         }}
       >
@@ -81,7 +81,7 @@ export default function MedievalScene() {
           <Environment files="/rogland_clear_night_4k.hdr" background />
           <FloorWithEXRTexture />
           <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[17, 0, 6]} name="Gibbet" message=""/>
-          <GLBAsset filePath="/1/Barrel.glb" scale={[0.6, 0.6, 0.6]} position={[-5, -0.2, -10]} name="Barrell" message="I am a barrell"/>
+          <GLBAsset filePath="/1/Barrel.glb" scale={[0.8, 0.8, 0.8]} position={[-5, -0.4, -10]} name="Barrell" message="I am a barrell"/>
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
           <AssetQuiz filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 35]} jsonFile="../../1/medieval.json" name="weaponry"/>
           <GLBAsset filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[4, 0, 11]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
