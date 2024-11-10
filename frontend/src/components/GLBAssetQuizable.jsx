@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Html } from '@react-three/drei';
-import '../css/GLBAsset.css'; // Import the CSS file
+import '../css/AssetQuiz.css'; // Import the CSS file
 
 // Sample JSON data for demonstration
 const data = {
