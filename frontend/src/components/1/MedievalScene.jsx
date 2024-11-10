@@ -6,6 +6,7 @@ import FirstPersonCamera from '../FirstPersonCamera'
 import FloorWithEXRTexture from '../FloorWithEXRTexture'
 import GLBAsset from '../GLBAsset'
 import AssetQuiz from '../AssetQuiz'
+import GLBAssetQuizable from '../GLBAssetQuizable'
 
 export default function MedievalScene() {
   const [dialogueData, setDialogueData] = useState(null)
@@ -84,6 +85,7 @@ export default function MedievalScene() {
           <GLBAsset filePath="/1/Barrel.glb" scale={[0.8, 0.8, 0.8]} position={[-5, -0.4, -10]} name="Barrell" message="I am a barrell"/>
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
           <AssetQuiz filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 35]} jsonFile="../../1/medieval.json" name="weaponry"/>
+<<<<<<< HEAD
           <GLBAsset filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[4, 0, 11]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
           <GLBAsset filePath="/1/IronChair.glb" scale={[1.6, 1.6, 1.6]} position={[17, 0, 0]} rotation={[0, -Math.PI / 2, 0]} name="IronChair" message="This is an iron chair"/> 
           <GLBAsset filePath="/1/Guillotine.glb" scale={[1.6, 1.6, 1.6]} position={[16, 0, 10]} rotation={[0, -Math.PI / 2, 0]} name="Guillotine" message="This is a guillotine"/>
@@ -93,6 +95,12 @@ export default function MedievalScene() {
           {/* banners */}
           <GLBAsset filePath="/1/Banner.glb" scale={[1.5, 1.5, 1.5]} position={[-8.5, 8, 0]} rotation={[0, Math.PI/2, 0]} name="Banner"/>
           <GLBAsset filePath="/1/Banner.glb" scale={[1.5, 1.5, 1.5]} position={[20.5, 8, 0]} rotation={[0, -Math.PI/2, 0]} name="Banner"/>
+=======
+          <GLBAssetQuizable filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[4, 0, 11]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
+          <GLBAsset filePath="/1/IronChair.glb" scale={[1, 1, 1]} position={[0, 0, 0]} name="IronChair" message="This is an iron chair"/> 
+          <GLBAsset filePath="/1/Throne.glb" scale={[1, 1, 1]} position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]} name="Throne"/>
+          <AssetQuiz filePath="/1/King.glb" scale={[2.2, 2.2, 2.2]} position={[5, 0, -10]} jsonFile="../../1/medieval.json" name="architecture"/>
+>>>>>>> 002bbb72489145a36e5083372eb6acf991d4982d
         </Suspense>
 
         {/* FirstPersonCamera with onInteract prop removed, since interaction is now handled by pressing 'E' */}
