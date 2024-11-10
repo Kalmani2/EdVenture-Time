@@ -83,9 +83,11 @@ export default function MedievalScene() {
           <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[-4, 0, 0]} name="Gibbet" message=""/>
           <GLBAsset filePath="/1/Barrel.glb" scale={[0.6, 0.6, 0.6]} position={[-2, 0, 0]} name="Barrell" message="I am a barrell"/>
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
-          <GLBAsset filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 0]} name="Catapult" message="This is a catapult"/>
-          <GLBAsset filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[0, 0, 0]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
-          <AssetQuiz filePath="/1/King.glb" scale={[2.2, 2.2, 2.2]} position={[5, 0, 0]} jsonFile="../../1/medieval.json" name="King"/>
+          <AssetQuiz filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 35]} jsonFile="../../1/medieval.json" name="weaponry"/>
+          <GLBAsset filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[4, 0, 11]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
+          <GLBAsset filePath="/1/IronChair.glb" scale={[1, 1, 1]} position={[0, 0, 0]} name="IronChair" message="This is an iron chair"/> 
+          <GLBAsset filePath="/1/Throne.glb" scale={[1, 1, 1]} position={[0, 2, 0]} rotation={[0, -Math.PI / 2, 0]} name="Throne"/>
+          <AssetQuiz filePath="/1/King.glb" scale={[2.2, 2.2, 2.2]} position={[5, 0, -10]} jsonFile="../../1/medieval.json" name="architecture"/>
         </Suspense>
 
         {/* FirstPersonCamera with onInteract prop removed, since interaction is now handled by pressing 'E' */}

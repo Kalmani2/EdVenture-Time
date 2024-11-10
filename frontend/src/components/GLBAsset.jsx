@@ -8,6 +8,7 @@ export default function GLBAsset({
   filePath,
   scale = [1, 1, 1],
   position = [0, 0, 0],
+  rotation = [0, 0, 0],
   message,
   name,
   interactable,
@@ -28,7 +29,7 @@ export default function GLBAsset({
   const popupHeightClass = interactable ? 'large-popup' : 'small-popup';
 
   return (
-    <group ref={ref} position={position} onClick={handleClick}>
+    <group ref={ref} position={position} rotation={rotation} onClick={handleClick}>
       <primitive object={gltf.scene} scale={scale} />
       {isPopupVisible && message && (
         <Html position={[0, 3, 0]} center>
