@@ -1,5 +1,5 @@
-import React, { Suspense, useState, useEffect } from 'react'
-import { Canvas } from '@react-three/fiber'
+import React, { Suspense, useState, useEffect, useRef } from 'react'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, Html } from '@react-three/drei'
 import { AxesHelper, GridHelper, Raycaster, Vector3 } from 'three'
 import FirstPersonCamera from '../FirstPersonCamera'
@@ -9,6 +9,8 @@ import AssetQuiz from '../AssetQuiz'
 
 export default function MedievalScene() {
   const [dialogueData, setDialogueData] = useState(null)
+  const [adventurerPosition, setAdventurerPosition] = useState(new Vector3(5, 0, 5))
+  const [adventurerRotation, setAdventurerRotation] = useState([0, 0, 0]) // To store rotation
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -17,7 +19,6 @@ export default function MedievalScene() {
       }
     }
     window.addEventListener('keydown', handleKeyPress)
-
     return () => {
       window.removeEventListener('keydown', handleKeyPress)
     }
@@ -26,15 +27,12 @@ export default function MedievalScene() {
   const checkForInteractableObject = () => {
     const raycaster = new Raycaster()
     const cameraDirection = new Vector3()
+    const { camera, scene } = useThree()
 
-    // Get the camera's current position and direction
-    const { camera } = useThree()
     camera.getWorldDirection(cameraDirection)
     raycaster.set(camera.position, cameraDirection)
 
-    // Get objects intersected by the ray
     const intersects = raycaster.intersectObjects(scene.children, true)
-
     if (intersects.length > 0) {
       const intersectedObject = intersects[0].object
       handleNPCClick(intersectedObject)
@@ -64,6 +62,46 @@ export default function MedievalScene() {
     setDialogueData(null)
   }
 
+  // Adventurer follow and face logic
+  const AdventurerFollow = () => {
+    const { camera } = useThree()
+    const followSpeed = 0.05
+    const distanceBehind = 7
+    const previousCameraPosition = useRef(new Vector3().copy(camera.position))
+
+    useFrame(() => {
+      const currentCameraPosition = new Vector3().copy(camera.position)
+
+      // Check if the camera has moved
+      const isCameraMoving = !previousCameraPosition.current.equals(currentCameraPosition)
+
+      if (isCameraMoving) {
+        // Calculate the backward direction vector of the camera
+        const backwardDirection = new Vector3()
+        camera.getWorldDirection(backwardDirection)
+        backwardDirection.negate().multiplyScalar(distanceBehind)
+
+        // Calculate target position for the adventurer
+        const targetPosition = currentCameraPosition.add(backwardDirection)
+        targetPosition.y = 0
+
+        // Smoothly move the adventurer towards the target position
+        const adventurerPos = adventurerPosition.clone().lerp(targetPosition, followSpeed)
+        setAdventurerPosition(adventurerPos)
+
+        // Calculate rotation to face the camera
+        const directionToCamera = new Vector3().subVectors(camera.position, adventurerPos)
+        const rotationY = Math.atan2(directionToCamera.x, directionToCamera.z)
+        setAdventurerRotation([0, rotationY, 0]) // Update the rotation state
+      }
+
+      // Update previous camera position
+      previousCameraPosition.current.copy(currentCameraPosition)
+    })
+
+    return null
+  }
+
   return (
     <div style={{ height: '100vh', position: 'relative' }} onClick={closeDialogue}>
       <Canvas
@@ -87,14 +125,21 @@ export default function MedievalScene() {
           <GLBAsset filePath="/2/gladiator.glb" scale={[0.2, 0.2, 0.2]} position={[-6, 0, 10]} name="Barrel" message=""/>
           <GLBAsset filePath="/2/gladiator2.glb" scale={[0.8, 0.8, 0.8]} position={[-6, 5, -10]} name="Barrel" message=""/>
           <GLBAsset filePath="/2/Sphinx.glb" scale={[6, 6, 6]} position={[35, 7, -11]} rotation={[0, -Math.PI, 0]} name="Barrel" message=""/>
-        
-          {/* <AssetQuiz filePath="/1/King.glb" scale={[1, 1, 1]} position={[0, 0, 0]} jsonFile="../../1/medieval.json" name="King"/> */}
+          
+          {/* Adventurer following and looking at the player with rotation */}
+          <GLBAsset 
+            filePath="/2/Adventurer.glb" 
+            scale={[2, 2, 2]} 
+            position={adventurerPosition.toArray()} 
+            rotation={adventurerRotation} // Pass updated rotation here
+            name="Adventurer" 
+            message=""
+          />
+          <AdventurerFollow />
         </Suspense>
 
-        {/* FirstPersonCamera with onInteract prop removed, since interaction is now handled by pressing 'E' */}
         <FirstPersonCamera />
 
-        {/* Display dialogue when available */}
         {dialogueData && (
           <Html position={dialogueData.position} center>
             <div
