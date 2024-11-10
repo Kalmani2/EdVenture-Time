@@ -69,7 +69,7 @@ export default function MedievalScene() {
       <Canvas
         camera={{
           position: [0, 2.5, 5],
-          fov: 45
+          fov: 75
         }}
       >
         <ambientLight intensity={0.3} />
@@ -80,7 +80,9 @@ export default function MedievalScene() {
         <Suspense fallback={null}>
           <Environment files="/rogland_clear_night_4k.hdr" background />
           <FloorWithEXRTexture />
-          <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[-4, 0, 0]} name="Gibbet" message=""/>
+          <GLBAsset filePath="/2/colosseum.glb" scale={[50, 50, 50]} position={[-4, 15, 0]} name="Gibbet" message=""/>
+          <GLBAsset filePath="/2/RomanCenturion.glb" scale={[1, 1, 1]} position={[5, 2, -40]} name="Barrel" message=""/>
+          <GLBAsset filePath="/2/RomanGuy.glb" scale={[3, 3, 3]} position={[10, 2, -20]} name="Barrel" message=""/>
         
           {/* <AssetQuiz filePath="/1/King.glb" scale={[1, 1, 1]} position={[0, 0, 0]} jsonFile="../../1/medieval.json" name="King"/> */}
         </Suspense>

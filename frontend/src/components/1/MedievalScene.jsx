@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useEffect } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
 import { Environment, Html } from '@react-three/drei'
 import { AxesHelper, GridHelper, Raycaster, Vector3 } from 'three'
 import FirstPersonCamera from '../FirstPersonCamera'
@@ -111,6 +111,23 @@ export default function MedievalScene() {
           </Html>
         )}
       </Canvas>
+
+      {/* Crosshair UI */}
+      <div style={crosshairStyle}></div>
     </div>
   )
+}
+
+// Crosshair styling
+const crosshairStyle = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '30px',
+  height: '30px',
+  borderTop: '2px solid white',
+  borderLeft: '2px solid white',
+  pointerEvents: 'none',
+  zIndex: 10,
 }
