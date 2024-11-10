@@ -81,12 +81,13 @@ export default function MedievalScene() {
         <Suspense fallback={null}>
           <Environment files="/rogland_clear_night_4k.hdr" background />
           <FloorWithEXRTexture />
-          <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[17, 0, 6]} name="Gibbet" message=""/>
+          <GLBAsset filePath="/1/TortureDevice.glb" scale={[1, 1, 1]} position={[17, 0, 6]} name="Gibbet" message="The gibbet was a medieval device used for displaying the bodies of executed criminals as a public warning. It typically consisted of a metal cage or chains in which the body was suspended, often left to decay in open air. This form of post-mortem punishment served to deter crime by showcasing the consequences of criminal acts in a very visible and gruesome way."/>
           <GLBAsset filePath="/1/Barrel.glb" scale={[0.6, 0.6, 0.6]} position={[-5, -0.2, -10]} name="Barrell" message="I am a barrell"/>
           <GLBAsset filePath="/1/Castle.glb" scale={[20, 20, 20]} position={[6, 0, 0]} />
           <AssetQuiz filePath="/1/Catapult.glb" scale={[1, 1, 1]} position={[20, 0, 35]} jsonFile="../../1/medieval.json" name="weaponry"/>
-          <GLBAsset filePath="/1/IronChair.glb" scale={[1.6, 1.6, 1.6]} position={[17, 0, 0]} rotation={[0, -Math.PI / 2, 0]} name="IronChair" message="This is an iron chair"/> 
-          <GLBAsset filePath="/1/Guillotine.glb" scale={[1.6, 1.6, 1.6]} position={[16, 0, 10]} rotation={[0, -Math.PI / 2, 0]} name="Guillotine" message="This is a guillotine"/>
+          <GLBAsset filePath="/1/IronChair.glb" scale={[1.6, 1.6, 1.6]} position={[17, 0, 0]} rotation={[0, -Math.PI / 2, 0]} name="Iron Chair" message="
+The iron chair, also known as the 'Chair of Torture,' was a medieval torture device used primarily in Europe. It featured sharp spikes on the seat, backrest, and armrests, designed to inflict severe pain without causing immediate death. Victims would be strapped down, pressing their bodies into the spikes, often leading to prolonged agony before further interrogation or punishment."/> 
+          <GLBAsset filePath="/1/Guillotine.glb" scale={[1.6, 1.6, 1.6]} position={[16, 0, 10]} rotation={[0, -Math.PI / 2, 0]} name="Guillotine" message="The guillotine was a device used primarily during the French Revolution for executions, designed to deliver a swift, humane death by beheading. Its structure included a tall wooden frame with a heavy, angled blade that would drop onto the neck of the condemned, severing it instantly. The guillotine became infamous not only for its efficiency but also as a symbol of revolutionary justice and the era’s turbulent social upheaval."/>
           <GLBAsset filePath="/1/Throne.glb" scale={[1, 1, 1]} position={[6, 2, -11]} rotation={[0, -Math.PI / 2, 0]} name="Throne"/>
           <GLBAssetQuizable filePath="/1/Knight.glb" scale={[0.3, 0.3, 0.3]} position={[4, 0, 11]} name="Knight" message="Greetings, traveler! The realm is full of perils, but bravery leads to glory. Stay vigilant, and may fortune favor your quest." interactable={true}/>
           <GLBAssetQuizable filePath="/1/King.glb" scale={[2.2, 2.2, 2.2]} position={[6, 0, -9]} name="King" message="Welcome to the throne room, noble visitor. I am the king of this realm. What brings you to my court?" interactable={true}/>

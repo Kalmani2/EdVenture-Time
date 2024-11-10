@@ -6,16 +6,21 @@ import FirstPersonCamera from '../FirstPersonCamera'
 import FloorWithEXRTexture from '../FloorWithEXRTexture'
 import GLBAsset from '../GLBAsset'
 import AssetQuiz from '../AssetQuiz'
+import narratorAudio from './audio.mp3' // Import your audio file
 
 export default function MedievalScene() {
   const [dialogueData, setDialogueData] = useState(null)
   const [adventurerPosition, setAdventurerPosition] = useState(new Vector3(5, 0, 5))
   const [adventurerRotation, setAdventurerRotation] = useState([0, 0, 0]) // To store rotation
+  const audioRef = useRef(new Audio(narratorAudio)) // Ref for audio instance
 
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === 'e') {
         checkForInteractableObject()
+      }
+      if (event.key === 'q') {
+        audioRef.current.play() // Play audio on 'q' key press
       }
     }
     window.addEventListener('keydown', handleKeyPress)
